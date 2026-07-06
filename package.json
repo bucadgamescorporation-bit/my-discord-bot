@@ -1,0 +1,27 @@
+{
+  "name": "my-discord-bot",
+  "version": "1.0.0",
+  "description": "A fully-featured Discord bot with moderation, leveling, economy, and more",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "discord.js",
+    "moderation",
+    "economy",
+    "leveling"
+  ],
+  "author": "bucadgamescorporation-bit",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.14.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}

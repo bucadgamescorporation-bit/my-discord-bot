@@ -1,0 +1,69 @@
+{
+  "bot": {
+    "prefix": "!",
+    "activity": "Discord Bot | /help",
+    "status": "online"
+  },
+  "moderation": {
+    "enabled": true,
+    "auto_moderation": true,
+    "log_channel": null,
+    "anti_spam": {
+      "enabled": true,
+      "messages_per_second": 5,
+      "timeout_duration": 60
+    },
+    "anti_link": {
+      "enabled": true,
+      "whitelist": []
+    },
+    "anti_invite": {
+      "enabled": true,
+      "whitelist": []
+    },
+    "bad_words": {
+      "enabled": true,
+      "words": []
+    },
+    "caps_filter": {
+      "enabled": true,
+      "percentage": 70
+    }
+  },
+  "leveling": {
+    "enabled": true,
+    "min_xp": 10,
+    "max_xp": 30,
+    "cooldown": 60
+  },
+  "economy": {
+    "enabled": true,
+    "currency_name": "Credits",
+    "currency_symbol": "💰",
+    "daily_reward": 100,
+    "work_reward": 50,
+    "beg_reward": 10
+  },
+  "tickets": {
+    "enabled": true,
+    "category": null,
+    "log_channel": null
+  },
+  "welcome": {
+    "enabled": true,
+    "channel": null,
+    "message": "Welcome {user} to {server}!",
+    "auto_role": []
+  },
+  "logging": {
+    "enabled": true,
+    "log_channel": null,
+    "log_types": {
+      "messages": true,
+      "members": true,
+      "moderation": true,
+      "roles": true,
+      "channels": true
+    }
+  }
+}
