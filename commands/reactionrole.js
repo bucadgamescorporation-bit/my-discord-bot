@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, PermissionFlagsBits } = require('discord.js');
 
 module.exports = {
   data: new SlashCommandBuilder()
@@ -16,7 +16,7 @@ module.exports = {
         .setDescription('Button description')
         .setRequired(true)
     )
-    .setDefaultMemberPermissions('Administrator'),
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
   async execute(interaction, client) {
     const roleInput = interaction.options.getString('role');
     const description = interaction.options.getString('description');
