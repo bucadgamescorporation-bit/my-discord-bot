@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -29,7 +29,7 @@ module.exports = {
         .setDescription('Set the log channel')
         .addChannelOption(option => option.setName('channel').setDescription('Log channel').setRequired(true))
     )
-    .setDefaultMemberPermissions('Administrator'),
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
   async execute(interaction, client) {
     const logs = loadLogs();
     const guildId = interaction.guildId;
