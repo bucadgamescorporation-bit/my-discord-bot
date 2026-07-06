@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, PermissionFlagsBits } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
 
@@ -35,7 +35,7 @@ module.exports = {
         .setDescription('Set welcome message')
         .addStringOption(option => option.setName('message').setDescription('Message (use {user} and {server})').setRequired(true))
     )
-    .setDefaultMemberPermissions('Administrator'),
+    .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
   async execute(interaction, client) {
     const welcome = loadWelcome();
     const guildId = interaction.guildId;
