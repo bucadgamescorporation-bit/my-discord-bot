@@ -16,21 +16,9 @@ function formatUptime(ms) {
   return parts.join(' ') || '0s';
 }
 
-let activityIndex = 0;
-const activities = [
-  { type: ActivityType.Playing, name: 'with commands' },
-  { type: ActivityType.Watching, name: 'Discord' },
-];
-
 function updateActivity(client) {
   const uptime = formatUptime(Date.now() - client.startTime);
-  const uptimeActivity = { type: ActivityType.Watching, name: `Uptime: ${uptime}` };
-  
-  const currentActivities = [...activities, uptimeActivity];
-  const activity = currentActivities[activityIndex % currentActivities.length];
-  
-  client.user.setActivity(activity.name, { type: activity.type });
-  activityIndex++;
+  client.user.setActivity(`🟢 Uptime: ${uptime}`, { type: ActivityType.Watching });
 }
 
 module.exports = {
